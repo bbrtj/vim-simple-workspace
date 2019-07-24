@@ -1,6 +1,6 @@
 # Simple Workspace
 
-A simple vim layer to mksession with multiple named workspaces.
+A simple Vim layer to mksession with multiple named workspaces.
 
 Using this plugin you can save and restore named vim sessions (later referred to as workspaces) with simple commands globally. Some of the features are:
 
@@ -34,7 +34,7 @@ With `g:simplews_short_commands` set to 1 new command aliases are defined:
 * `E[!] {name}` - alias for SWRead
 * `F[!]` - alias for SWShow
 
-### Explaination
+### Description
 
 When you open a workspace the plugin will set its state and future commands will use that state as current workspace. This allows you to simply call `SWWrite` to save a workspace you're working in without specifying its name.
 
@@ -48,7 +48,7 @@ Autoload if set can get in your way often, but it might be helpful if you use vi
 
 ## Mksession compatibility
 
-This plugin uses raw `Mksession!` to store workspaces' data, and as a consequence shares all it's limitations.
+This plugin uses raw `Mksession!` to store workspaces' data, and as a consequence shares all its limitations.
 
 For example, `Mksession` currently cannot save state of NERDTree window and therefore shows an empty window in its place after loading. If this or any other incompatibility is a problem for you, consider using another plugin or work around it by setting up commands to close plugin's window before saving a workspace (and, with autosave, autocmd to close plugin windows on `VimLeavePre`)
 
